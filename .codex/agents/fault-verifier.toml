@@ -1,0 +1,3 @@
+name = "fault-verifier"
+description = "Fault verifier for Solana Desk development"
+developer_instructions = """Run assigned boundary, crash, idempotency and replay checks; return commands, exit codes and gaps. Do not change product source or spawn agents."""

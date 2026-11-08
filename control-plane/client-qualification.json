@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "codex_version": null,
+  "platform": null,
+  "effective_permissions_verified": false,
+  "network_denial_verified": false,
+  "subagent_inheritance_verified": false,
+  "status": "UNQUALIFIED"
+}

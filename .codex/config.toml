@@ -1,0 +1,10 @@
+# Native Codex configuration; qualify against the installed CLI before relying on enforcement.
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+
+[sandbox_workspace_write]
+network_access = false
+
+[agents]
+enabled = true
+max_concurrent_threads_per_session = 3

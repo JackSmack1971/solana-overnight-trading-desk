@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "capabilities": [
+    {
+      "id": "builtin:filesystem",
+      "state": "native-runtime-governed",
+      "authorization": "sandbox-and-approval"
+    },
+    {
+      "id": "builtin:git",
+      "state": "native-runtime-governed",
+      "authorization": "operation-specific"
+    },
+    {
+      "id": "builtin:subagents",
+      "state": "version-qualification-required",
+      "authorization": "inherited-parent"
+    },
+    {
+      "id": "external:research",
+      "state": "optional-disabled-by-default",
+      "authorization": "explicit-network-approval"
+    },
+    {
+      "id": "external:solana-rpc",
+      "state": "not-configured",
+      "authorization": "blueprint-provider-gate"
+    }
+  ]
+}

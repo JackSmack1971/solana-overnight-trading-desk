@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "tasks": [
+    {"id":"P0-baseline","phase":"P0","depends_on":[],"scope":["control-plane/","docs/blueprint/"],"requirements":["blueprint-integrity"],"gate":"package","description":"Inspect Git state, qualify client against local host and capture baseline; do not infer qualification","manual":true},
+    {"id":"P1-contracts","phase":"P1","depends_on":["P0-baseline"],"scope":["contracts/","tests/"],"requirements":["OD-001","OD-049"],"gate":"implementation","description":"Inventory exact normative identifiers and define acceptance fixtures, schemas and traceability","manual":false},
+    {"id":"P2-core","phase":"P2","depends_on":["P1-contracts"],"scope":["src/desk/","tests/"],"requirements":["blueprint-section-16"],"gate":"implementation","description":"Build deterministic pure application core as contract-approved slices","manual":false},
+    {"id":"P3-providers","phase":"P3","depends_on":["P2-core"],"scope":["src/desk/providers/","tests/"],"requirements":["reference-parity"],"gate":"implementation","description":"Build offline provider and decoder adapters, independent parity probes","manual":false},
+    {"id":"P4-paper-ledger","phase":"P4","depends_on":["P2-core","P3-providers"],"scope":["src/desk/","tests/"],"requirements":["paper-only","replay"],"gate":"implementation","description":"Build paper engine, ledger and deterministic recovery only","manual":false},
+    {"id":"P5-reporting","phase":"P5","depends_on":["P4-paper-ledger"],"scope":["src/desk/","tests/"],"requirements":["experiment-protocol"],"gate":"implementation","description":"Implement reporting and experiment protocol","manual":false},
+    {"id":"P6-offline","phase":"P6","depends_on":["P5-reporting"],"scope":["tests/","artifacts/control-plane/"],"requirements":["blueprint-sections-17-18"],"gate":"offline-acceptance","description":"Execute offline acceptance and negative tests; no live providers","manual":false},
+    {"id":"P7-host","phase":"P7","depends_on":["P6-offline"],"scope":["artifacts/control-plane/"],"requirements":["WSL2-qualification"],"gate":"host-qualified","description":"Operator-controlled host/network isolation qualification","manual":true}
+  ],
+  "notes": "Phase-scale DAG, not an implementation-complete task graph. Break each phase into contract-scoped slices before claiming completion. Manual tasks and semantic decisions require operator action."
+}

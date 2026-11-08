@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "gates": {
+    "package": [
+      "validate-package",
+      "unittest-control-plane"
+    ],
+    "implementation": [
+      "focused-tests",
+      "repo-required-checks",
+      "independent-diff-review"
+    ],
+    "offline-acceptance": [
+      "blueprint-fixtures",
+      "fault-tests",
+      "reference-parity",
+      "replay-determinism"
+    ],
+    "host-qualified": [
+      "wsl2-host-probes",
+      "network-denial-probes",
+      "operator-host-review"
+    ]
+  },
+  "notes": "All command receipts schema_version 2, source local-command, candidate-bound. Independent review requires explicit reviewer assertion. Gate verdicts are not transitive; each gate lists direct obligations. Host qualification is independently operator-gated.",
+  "minimum_tests": {
+    "unittest-control-plane": 1,
+    "focused-tests": 1,
+    "repo-required-checks": 1,
+    "blueprint-fixtures": 1,
+    "fault-tests": 1,
+    "reference-parity": 1,
+    "replay-determinism": 1
+  }
+}

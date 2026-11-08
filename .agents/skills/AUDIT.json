@@ -1,0 +1,54 @@
+{
+  "date": "2026-11-08",
+  "source_archive": "skills(2).zip",
+  "blueprint": "v2.6 consolidated",
+  "skill_count": 7,
+  "change_summary": {
+    "desk-contracts": {
+      "original_sha256": "70aa1abdd4eb4a77e2e3596fad5ad6af9dd93ec3fcb01c43a24801ca07ba620f",
+      "revised_sha256": "941e6257d8b5d07c720b41e004555c905734ff566265738b89b11f416821d2db",
+      "changed_lines": 10,
+      "lines": 16
+    },
+    "desk-fault-verification": {
+      "original_sha256": "ec54712e68a6142dd2cfb69200a7f7d63b374fdfea702bddac7e93782c43b24a",
+      "revised_sha256": "4642547978f94e44d04bba36552510a761144e3d3c6e6d5c5ca1ee95c5dc987c",
+      "changed_lines": 8,
+      "lines": 16
+    },
+    "desk-host-handoff": {
+      "original_sha256": "6a5c823c017f0d05e41813ed7a239f3c2aeaa49c3d450b148f715093a0825147",
+      "revised_sha256": "df392d2d5a7dbf324c8b274f291ee574fcdb7ef69cb9445fca5337ced931b58b",
+      "changed_lines": 8,
+      "lines": 16
+    },
+    "desk-implement-slice": {
+      "original_sha256": "14ea24917f7990cb96160cd384088f51a2e9f171280966ae92003681bf3edcb0",
+      "revised_sha256": "d67d14a7d2de253e2a1926ff4b647c6bcab845bff6b524549ad8deefe58e2178",
+      "changed_lines": 8,
+      "lines": 16
+    },
+    "desk-reference-parity": {
+      "original_sha256": "dc1e441888adbf481c7b0079b9a02b7660821f599c151dd466fe1d3e38f1c0c3",
+      "revised_sha256": "e8a44e9783c79f06d76cccd9eca7cfbf04f573467b0916e7259c841b7d002abf",
+      "changed_lines": 8,
+      "lines": 16
+    },
+    "desk-review-gate": {
+      "original_sha256": "bea94a2541b87dbfdba73ddbd05f98679b68781e2c9852b1b8d582bad5536738",
+      "revised_sha256": "57df8882b65986b09d6496bd9855064b1df3a2dc2dfb5f18815360a0d00efb41",
+      "changed_lines": 8,
+      "lines": 16
+    },
+    "desk-task-intake": {
+      "original_sha256": "26fa354278ad34aecd90e5019722e27b8c15b8fd605c48a2c21c6c342adc40c4",
+      "revised_sha256": "84399fb7c0a8a00bea5febf4ffdf1ce846749d69413ca969256f1945eda04f2f",
+      "changed_lines": 6,
+      "lines": 16
+    }
+  },
+  "static_checks": "pending",
+  "behavioral_evaluation": "NOT_YET_TESTED",
+  "G5": "UNVALIDATED",
+  "note": "No Codex CLI invocation or paired no-skill baseline was executed."
+}
